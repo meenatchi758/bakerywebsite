@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Cake Navigation</title>
+    <link rel="stylesheet" href="cake.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/bakerylogo.png" alt="Sweet Cake Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">THEMED</a></li>
+            <li><a href="#">PASTRIES</a></li>
+            <li><a href="#">BREAD/DESSERTS</a></li>
+            <li><a href="#">BEVERAGES</a></li>
+            <li><a href="#">OUR IDENTITY</a></li>
+            <li><a href="#">REACH OUT</a></li>
+        </ul>
+    </nav>
+    <div class="section">
+    <div class="container">
+        <div class="search-box">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" placeholder="Search">
+        </div>
+        </div>
+        <div class="buttons">
+            <button class="order-now">ORDER NOW</button>
+            <button class="login-signup">LOGIN/SIGN UP</button>
+        </div>
+    </div>
+    <div class="image">
+    <div class="carousel-container">
+        <div class="carousel-track">
+        <img src="./images/cake1.jpeg" alt="Cake 1">
+        <img src="./images/cake7.jpeg" alt="Cake 2">
+        <img src="./images/cake5.jpeg" alt="Cake 5">
+        <img src="./images/cake3.jpeg" alt="Cake 3">
+        <img src="./images/cake4.jpeg" alt="Cake 4">
+        <img src="./images/cake6.jpeg" alt="Cake 6">
+        <img src="./images/cake2.jpeg" alt="Cake 7">
+        <img src="./images/cake8.jpeg" alt="Cake 8">
+        <img src="./images/cake9.jpeg" alt="Cake 9">
+        <img src="./images/cake10.jpeg" alt="Cake 10">
+    </div>
+    </div>
+    </div>
+
+    <script>
+        const track = document.querySelector(".carousel-track");
+
+        function moveCarousel() {
+            let firstImage = track.firstElementChild;
+            track.style.transition = "transform 0.5s linear";
+            track.style.transform = `translateX(-${firstImage.clientWidth + 20}px)`;
+
+            setTimeout(() => {
+                track.appendChild(firstImage); 
+                track.style.transition = "none"; 
+                track.style.transform = "translateX(0)";
+            }, 500);
+        }
+
+        setInterval(moveCarousel, 2000);
+    </script>
+
+    <div class="our-tale">
+        <h2>OUR TALE</h2><br>
+        <p>Egg-free. Vegetarian. Vegan. We Promise!</p><br>
+        <p>Keeping taste and texture our highest priority in the construction of our desserts, we bring to you a range of healthy delights that celebrates any occasion in your calendar! There's something for everyone here... From petite desserts to rich cakes to themed cakes with celebrations! We make you what you want, in the flavors and flour as per your wish. Pleased to have won many hearts with our vegetarian flag soaring high, we continue with our motto of creating egg-free desserts without any compromise.</p>
+    </div>
+    <section class="cake-section">
+        <h2>IN VOGUE</h2><br>
+
+
+        <div class="cake-container">
+            <div class="cake-card">
+                <img src="images/Rasmalai Cake Recipe - Eggless Ras malai Cake.jpeg" alt="Biscoff Drip Cake">
+                <div class="cake-label">RASAMALAI CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Rose Milk Cake - Bake with Shivesh.jpeg" alt="Raspberry Cheesecake">
+                <div class="cake-label">ROSEMILK CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Lemon Mascarpone Layer Cake _ MUST TRY Lemon Cake Recipe!.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">LEMON CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Tender Coconut Pudding (foodgawker).jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">ELANEER PUDDING</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/redvelvet_cake.jpg" alt="Rasmalai Cake">
+                <div class="cake-label">RED VELVET</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Biscoff Drip Cake.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">BISCOFF DRIP CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Ferrero Rocher Showstopper Cake.jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">FERRO ROCHER CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/Kheer (Authentic Indian Rice Pudding).jpeg" alt="Rasmalai Cake">
+                <div class="cake-label">RICE PUDDING CAKE</div>
+            </div>
+            <div class="cake-card">
+                <img src="images/p-indulgent-choco-dream-cake-half-kg--285071-m.webp" alt="Rasmalai Cake">
+                <div class="cake-label">CHOCO CAKE</div>
+            </div>
+
+        </div>
+    </section>
+<div class="form">
+    <div class="form-container">
+        <h2>ENQUIRY FORM</h2><br>
+        <p>Let Us Know About Your Taste!!<br>We Will Customise It With Any Compromise!!</p><br>
+        
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Egg/Eggless" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" placeholder="Contact" required>
+                <input type="text" placeholder="Which Flour To Be Used?" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" placeholder="Mail ID" required>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Occasion" required>
+            </div>
+
+            <button type="submit">Convey Us</button>
+        </form>
+    </div>
+    </div>
+    
+</body>
+</html>
